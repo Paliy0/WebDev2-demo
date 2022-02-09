@@ -1,17 +1,15 @@
 <template>
-<h1>Dead Puppies</h1>
-  <Todo />
+  <StockList />
 </template>
 
 <script>
 //import DemoComponent from './components/DemoComponent.vue'
-//import StockList from '../src/components/StockList.vue'
-import Todo from '../src/components/Todo.vue'
+import StockList from '../src/components/StockList.vue'
 
 export default {
   name: 'App',
   components: {
-    Todo,
+    StockList,
   }
 };
 </script>
