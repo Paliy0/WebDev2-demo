@@ -1,11 +1,7 @@
 <template>
-    <table class="table">
-        <thead>
-            <td>Name</td>
-            <td>Price</td>
-        </thead>
+    <table class="table string-striped">
         <tbody>
-            <tr v-for="stock in stocks" :key=stock.name>
+            <tr v-show="!item.done in stocks" :key=stock.name>
                 <td>{{stock.name}}</td>
                 <td>
                     <b> {{stock.currency}} {{stock.price}}</b>
@@ -13,7 +9,7 @@
             </tr>
         </tbody>
     </table>
-    <button @click="updateStock()"> Update </button>
+    <button @click="addItem()"> Add </button>
 
 
 </template>
@@ -41,6 +37,9 @@ export default {
                     stock.price = 0;
                 }
             })
+        },
+        getMAxId(){
+            
         }
 
     },
