@@ -12,6 +12,10 @@
         </div>
       </div>
     <!-- End of individual stocks -->
+    <div class="card-footer">
+      <input class="form-control" v-model="amount">
+      <button @click="purchase">Buy</button>
+    </div>
 </template>
 
 <script>
@@ -22,6 +26,16 @@ export default {
         price: Number,
         previousPrice : Number,
         currency: String,
+    },
+    data() {
+      return {amount: ''}
+    },
+    methods: {
+      purchase(e) {
+        e.preventDefault();
+        this.$emit("buy", this.stock.name);
+        this.amount = ''; //clears field
+      }
     }
 
 }

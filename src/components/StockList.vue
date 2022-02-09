@@ -2,6 +2,7 @@
   <h1>Stock list</h1>
   <div class="col-md-4 mt-4" v-for="stock in stocks" :key="stock.name">
       <StockItem :name="stock.name" :price="stock.price" :previousPrice="stock.previousPrice" :currency="stock.currency"/>
+      <StockItem 
   </div>
 </template>
 
@@ -34,6 +35,9 @@ export default {
         }
       });
     },
+    purchaseItem {
+        
+    } 
   },  
   mounted() {
     setInterval(() => {
