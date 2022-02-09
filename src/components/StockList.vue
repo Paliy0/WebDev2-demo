@@ -38,9 +38,7 @@ export default {
                 }
             })
         },
-        getMAxId(){
-            
-        }
+        //function to add items
 
     },
     mounted() {
